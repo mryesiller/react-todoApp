@@ -6,8 +6,12 @@ services:
 
 before_install:
   - docker build -t mryesiller/react-todoapp -f Dockerfile.dev .
-  - rvm install 2.2.5
+  - gem install faraday -v 1.8.0
 
 deploy:
   provider: heroku
-  api_key: $HEROKU_ACCESS_KEY
+  api_key:
+    secure: $HEROKU_ACCESS_KEY
+  app: mryesiller-react-todoapp
+  on:
+    repo: mryesiller/react-todoapp
