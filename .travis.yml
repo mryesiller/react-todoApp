@@ -13,5 +13,3 @@ deploy:
   api_key:
     secure: $HEROKU_ACCESS_KEY
   app: mryesiller-react-todoapp
-  on:
-    repo: mryesiller/react-todoapp
