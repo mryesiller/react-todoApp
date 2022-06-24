@@ -6,9 +6,7 @@ services:
 
 before_install:
   - docker build -t mryesiller/react-todoapp -f Dockerfile.dev .
-
-before_deploy:
-  - rvm install 2.7.0
+  - rvm install 2.2.5
 
 deploy:
   provider: heroku
