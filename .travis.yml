@@ -6,8 +6,9 @@ services:
 
 before_install:
   - docker build -t mryesiller/react-todoapp -f Dockerfile.dev .
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 
 deploy:
   provider: heroku
-  api_key:
-    secure: $HEROKU_ACCESS_KEY
+  api_key: $HEROKU_ACCESS_KEY
