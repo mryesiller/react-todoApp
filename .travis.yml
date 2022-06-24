@@ -11,6 +11,8 @@ before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
 
 deploy:
-  provider: heroku:git
+  provider: heroku
   api_key: $HEROKU_ACCESS_KEY
   app: mryesiller-react-todoapp
+  on:
+    repo: mryesiller/react-todoapp
