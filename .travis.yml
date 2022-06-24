@@ -14,5 +14,3 @@ deploy:
   provider: heroku
   api_key: $HEROKU_ACCESS_KEY
   app: mryesiller-react-todoapp
-  on:
-    repo: mryesiller/react-todoapp
