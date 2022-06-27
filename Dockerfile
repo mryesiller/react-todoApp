@@ -1,7 +1,7 @@
 FROM node:16-alpine as builder
 WORKDIR '/react-app'
 COPY package.json .
-RUN nnpm install
+RUN npm install
 COPY . .
 RUN npm run build
 
